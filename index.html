@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    body {
+        background-color: #C95AB4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    ul{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 5px;
+    }
+    li {
+        display: flex; 
+         height: 100px;
+        width: 100px;
+
+    }
+    #caramelo {
+        background-image: url(./img/caramelo.png);
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+    }
+    #bomba {
+        background-image: url(./img/bomba.png);
+        background-size: contain;
+    }
+    .card {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        border-radius: 5px;
+        transition: transform 2000ms;
+        transform-style: preserve-3d;
+
+    }
+    .container:hover .card:hover {
+        cursor: pointer;
+        transform: rotateY(180deg);
+    }
+    .frontcard,
+    .caramelo,
+    .bomba {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    
+    .frontcard {
+        background-image: url(./img/frontcard.jpg);
+        background-size: contain;
+
+
+    }
+    .caramelo {
+        background-image: url(./img/caramelo.png);
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+
+    }
+    .bomba  {
+        background-image: url(./img/bomba.png);
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+
+    }
+    .img {
+        width: 300px;
+
+    }
+
+</style>
+<body>
+    <main>
+
+    <section>
+        <img class="img" src="./img/del (2).png" alt="">
+        <h1>¡Aca tenes que llegar!</h1>
+        <div>
+            <ul>
+            <div class="container">
+                <div class="card" onclick="sumar(caramelo)" >
+                <div class="frontcard"></div>
+                <li class="caramelo">Caramelo</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card"  onclick="sumar(bomba)">
+                <div class="frontcard"></div>
+                <li class="bomba">Bomba</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card"  onclick="sumar(bomba)">
+                <div class="frontcard"></div>
+                <li class="bomba" >Bomba</li>
+                </div>
+            </div>
+   
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(caramelo), sumar(caramelo)">
+                <div class="frontcard"></div>
+                <li class="caramelo">Caramelo</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(caramelo), sumar(caramelo)">
+                <div class="frontcard"></div>
+                <li class="caramelo">Caramelo</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(bomba), sumar(bomba)" >
+                <div class="frontcard"></div>
+                <li class="bomba">Bomba</li>
+                </div>
+            </div>
+            </ul>
+
+        </div>
+        <div>
+            <ul>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(caramelo), sumar(bomba)" >
+                <div class="frontcard"></div>
+                <li class="bomba">Bomba</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(caramelo), sumar(caramelo)">
+                <div class="frontcard"></div>
+                <li class="caramelo">Caramelo</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(bomba), sumar(bomba)" >
+                <div class="frontcard"></div>
+                <li class="bomba" >Bomba</li>
+                </div>
+            </div>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(bomba), sumar(bomba)">
+                <div class="frontcard"></div>
+                <li class="bomba">Bomba</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(caramelo), sumar(caramelo)">
+                <div class="frontcard"></div>
+                <li class="caramelo">Caramelo</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(caramelo), sumar(caramelo)">
+                <div class="frontcard"></div>
+                <li class="caramelo">Caramelo</li>
+                </div>
+            </div>
+            </ul>
+        </div>
+        <div>
+            <ul>
+            <div class="container">
+                <div class="card"  onclick="sumarpuntos(bomba), sumar(bomba)" >
+                <div class="frontcard"></div>
+                <li class="bomba">Bomba</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card"  onclick="sumarpuntos(bomba), (bomba)">
+                <div class="frontcard"></div>
+                <li class="bomba">Bomba</li>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card" onclick="sumarpuntos(caramelo),  sumar(caramelo)">
+                <div class="frontcard"></div>
+                <li class="caramelo" >Caramelo</li>
+                </div>
+            </div>
+            </ul>
+        </div>
+          
+        
+                
+            
+        
+       
+
+    </section>
+    <section>
+        <div class="img"><img class="img" src="./img/salida.png" alt=""></div>
+        <h1>¡Desde acá tenes que salir! 
+            <br>No te quedes sin vidas y junta 700 puntos.</h1>
+        <ul id="puntos">
+
+        </ul>
+        <h1 id="vidas">
+            Vidas: 
+            <span id="vidas" > </span>
+
+        </h1>
+
+
+    </section>
+    </main>
+
+
+    <script src="juego.js"> </script>
+</body>
+</html>
